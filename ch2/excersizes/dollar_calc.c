@@ -22,9 +22,9 @@ int main(void)
     d1 = dollar / 1;
     dollar = dollar - (d1 * 1);
 
-    printf("$20 bills:%d\n", d20);
-    printf("$10 bills:%d\n", d10);
-    printf("$5 bills:%d\n", d5);
-    printf("$1 bills:%d\n", d1);
+    printf("$20 bills: %d\n", d20);
+    printf("$10 bills: %d\n", d10);
+    printf("$5 bills: %d\n", d5);
+    printf("$1 bills: %d\n", d1);
     return 0;
 }
