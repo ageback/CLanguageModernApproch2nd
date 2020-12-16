@@ -32,9 +32,17 @@ int main(void)
     second_payment_remain = GetMonthlyRemainingLoan(first_payment_remain, monthly_payment, rate);
     third_payment_remain = GetMonthlyRemainingLoan(second_payment_remain, monthly_payment, rate);
 
-    printf("Balance remaining after first payment: $%.2f\n", first_payment_remain);
-    printf("Balance remaining after second payment: $%.2f\n", second_payment_remain);
-    printf("Balance remaining after third payment: $%.2f\n", third_payment_remain);
+    float remainLoan = loan;
+    for(int i = 0; i < 12; i++)
+    {
+         remainLoan = GetMonthlyRemainingLoan(remainLoan, monthly_payment, rate);
+         printf("Balance remaining after %d payment: $%.2f\n", (i+1), remainLoan);
+
+    }
+
+    /*printf("Balance remaining after first payment: $%.2f\n", first_payment_remain);*/
+    /*printf("Balance remaining after second payment: $%.2f\n", second_payment_remain);*/
+    /*printf("Balance remaining after third payment: $%.2f\n", third_payment_remain);*/
     return 0;
 }
 
